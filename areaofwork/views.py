@@ -162,9 +162,9 @@ def update(request, slugkey):
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
-def delete(request, slug):
+def delete(request, pk):
     try:
-        areaofwork = Areaofwork.objects.get(slug=slug)
+        areaofwork = Areaofwork.objects.get(int=pk)
         areaofwork.delete()
         return Response({
             'code': status.HTTP_200_OK,

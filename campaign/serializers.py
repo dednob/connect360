@@ -45,7 +45,7 @@ class CampaignsPostSerializer(serializers.ModelSerializer):
 
 
 class CampaignsListSerializer(serializers.ModelSerializer):
-    category = CategoryCampaignSerializer(many=True, read_only=True)
+    category = CategoryCampaignSerializer( read_only=True)
     areaofwork = AreaofworkCampaignSerializer (read_only=True)
 
     class Meta:

@@ -197,9 +197,9 @@ def update(request, slugkey):
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
-def delete(request, slug):
+def delete(request, pk):
     try:
-        project = Gallery.objects.get(slug=slug)
+        project = Gallery.objects.get(id=pk)
         project.delete()
         return Response({
             'code': status.HTTP_200_OK,

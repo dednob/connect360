@@ -8,6 +8,6 @@ urlpatterns = [
     path('detail/<str:slug>', views.aow_detail),
     path('create/', views.create),
     path('update/<str:slugkey>', views.update),
-    path('delete/<str:slug>', views.delete),
+    path('delete/<int:pk>', views.delete),
 
 ]

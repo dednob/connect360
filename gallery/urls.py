@@ -12,6 +12,6 @@ urlpatterns = [
     # path('byaow/<int:pk>', views.projects_by_aow),
     path('update/<str:slugkey'
          '>', views.update),
-    path('delete/<str:slug>', views.delete),
+    path('delete/<int:pk>', views.delete),
 
 ]

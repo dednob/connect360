@@ -14,6 +14,7 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
     path('contact/', include('contact.urls')),
     path('aboutus/', include('aboutus.urls')),
+    path('blogs/', include('blogs.urls')),
     # path('reviews/', include('reviews.urls')),
 
 

@@ -189,9 +189,9 @@ def update(request, slugkey):
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
-def delete(request, slug):
+def delete(request, pk):
     try:
-        campaign = Campaigns.objects.get(slug=slug)
+        campaign = Campaigns.objects.get(id=pk)
         campaign.delete()
         return Response({
             'code': status.HTTP_200_OK,
