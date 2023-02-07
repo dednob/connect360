@@ -164,7 +164,7 @@ def update(request, slugkey):
 @permission_classes([IsAuthenticated])
 def delete(request, pk):
     try:
-        areaofwork = Areaofwork.objects.get(int=pk)
+        areaofwork = Areaofwork.objects.get(id=pk)
         areaofwork.delete()
         return Response({
             'code': status.HTTP_200_OK,
